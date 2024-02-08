@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chv6hexpyrl6r"]
+[gd_scene load_steps=5 format=3 uid="uid://chv6hexpyrl6r"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_51q36"]
 [ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/white_line.tscn" id="1_243nv"]
 [ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/hud.tscn" id="1_o6sbw"]
+[ext_resource type="PackedScene" uid="uid://b1hnqllv0glhr" path="res://Scenes/player.tscn" id="4_8iywl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_51q36")
@@ -19,3 +20,6 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
 [node name="White Line" parent="." instance=ExtResource("1_243nv")]
+
+[node name="Player" parent="." instance=ExtResource("4_8iywl")]
+position = Vector2(24, 320)
