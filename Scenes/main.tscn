@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://chv6hexpyrl6r"]
+[gd_scene load_steps=3 format=3 uid="uid://chv6hexpyrl6r"]
 
 [ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/white_line.tscn" id="1_243nv"]
+[ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/hud.tscn" id="1_o6sbw"]
 
 [node name="Main" type="Node"]
+
+[node name="HUD" parent="." instance=ExtResource("1_o6sbw")]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
