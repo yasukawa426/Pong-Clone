@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://cnencmgxicga0"]
+
+[node name="White Line" type="Node"]
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 349.0
+offset_right = 5.0
+offset_bottom = 371.0
+grow_horizontal = 2
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 311.0
+offset_right = 5.0
+offset_bottom = 333.0
+grow_horizontal = 2
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 277.0
+offset_right = 5.0
+offset_bottom = 299.0
+grow_horizontal = 2
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 240.0
+offset_right = 5.0
+offset_bottom = 262.0
+grow_horizontal = 2
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 204.0
+offset_right = 5.0
+offset_bottom = 226.0
+grow_horizontal = 2
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 171.0
+offset_right = 5.0
+offset_bottom = 193.0
+grow_horizontal = 2
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 139.0
+offset_right = 5.0
+offset_bottom = 161.0
+grow_horizontal = 2
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 106.0
+offset_right = 5.0
+offset_bottom = 128.0
+grow_horizontal = 2
+
+[node name="ColorRect18" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 577.0
+offset_right = 5.0
+offset_bottom = 599.0
+grow_horizontal = 2
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 577.0
+offset_right = 5.0
+offset_bottom = 599.0
+grow_horizontal = 2
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 542.0
+offset_right = 5.0
+offset_bottom = 564.0
+grow_horizontal = 2
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 505.0
+offset_right = 5.0
+offset_bottom = 527.0
+grow_horizontal = 2
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 467.0
+offset_right = 5.0
+offset_bottom = 489.0
+grow_horizontal = 2
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 427.0
+offset_right = 5.0
+offset_bottom = 449.0
+grow_horizontal = 2
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 389.0
+offset_right = 5.0
+offset_bottom = 411.0
+grow_horizontal = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 36.0
+offset_right = 5.0
+offset_bottom = 58.0
+grow_horizontal = 2
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = 72.0
+offset_right = 5.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 22.0
+grow_horizontal = 2
