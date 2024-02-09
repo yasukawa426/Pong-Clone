@@ -32,9 +32,6 @@ func _ready():
 	print_debug("Player1: " + " " + str(player1.player_size))
 	print_debug("Player2: " + " " + str(player2.player_size))
 	
-	# Espera 1 segundo antes de começar
-	await get_tree().create_timer(1.0).timeout
-	
 	start_game()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,8 +40,10 @@ func _process(delta):
 	
 
 #Método chamado para começar o jogo
-func start_game():
-	ball.position = $Markers/BallPosition.position
+#Escolhe uma direção aleatoria pra bola e a manda
+func start_game():	
+	# Espera 1 segundo antes de começar
+	await get_tree().create_timer(1.0).timeout
 	
 	var random_x = randf_range(-1.0, 1.0)
 	var random_y = randf_range(-1.0, 1.0)
@@ -64,13 +63,11 @@ func start_game():
 	print_debug(str(random_x) + ", " + str(random_y))
 	
 	ball.movement = Vector2(random_x, random_y)
-	
-	player1.position = $Markers/Player1Position.position
-	player2.position = $Markers/Player2Position.position
+
 
 #Acontece quando o jogador detecta alguma colisão com a bola
 func _on_player_area_entered(body):
-	print_debug("Colisão detectada nos players")
+	print_debug("Colisão detectada nos players ------------")
 	
 	#pegamos o vetor de movimento da bola atual
 	var movement: Vector2 = ball.movement
@@ -130,3 +127,27 @@ func restart_game():
 	
 	#inicia o jogo
 	start_game()
+	
+
+#acertou a parede esquerda
+func _on_left_wall_area_entered(area):
+	first_score += 1
+	$"UI-Stage/HUD".update_first_score(first_score)
+	
+	if first_score < MAX_POINTS:
+		restart_round()
+	
+	else:
+		restart_game()
+
+#acertou a parede direita
+func _on_right_wall_area_entered(area):
+	second_score += 1
+	$"UI-Stage/HUD".update_second_score(second_score)
+	
+	if second_score < MAX_POINTS:
+		restart_round()
+	
+	else:
+		restart_game()
+	
