@@ -29,6 +29,9 @@ func _ready():
 	print_debug("Player1: " + " " + str(player1.player_size))
 	print_debug("Player2: " + " " + str(player2.player_size))
 	
+	# Espera 1 segundo antes de começar
+	await get_tree().create_timer(1.0).timeout
+	
 	start_game()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,10 +48,6 @@ func start_game():
 #Acontece quando o jogador detecta alguma colisão com a bola
 func _on_player_body_entered(body):
 	print_debug("Colisão detectada nos players")
-
-#Acontece quando uma das paredes detectam colisão com a bola
-func _on_wall_area_entered(area):
-	print_debug("Colisão detectada nas paredes")
 	
 	#pegamos o vetor de movimento da bola atual
 	var movement: Vector2 = ball.movement
@@ -58,6 +57,10 @@ func _on_wall_area_entered(area):
 	
 	#atualizamos o valor na bola
 	ball.movement = movement
+
+#Acontece quando uma das paredes detectam colisão com a bola
+func _on_wall_area_entered(area):
+	print_debug("Colisão detectada nas paredes")
 
 #Acontece quando o teto ou chão detecta uma colisão com a bola
 func _on_ceiling_area_entered(area):
