@@ -12,7 +12,9 @@ func _ready():
 	# identifica qual jogador é qual
 	$Player1.is_player_one = true
 	$Player2.is_player_two = true
-
+	
+	print_debug("Player1: " + " " + str($Player1.player_size))
+	print_debug("Player2: " + " " + str($Player2.player_size))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
