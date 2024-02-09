@@ -32,7 +32,7 @@ func _ready():
 	print_debug("Player1: " + " " + str(player1.player_size))
 	print_debug("Player2: " + " " + str(player2.player_size))
 	
-	$Music.play()
+	$Sounds/Music.play()
 	
 	start_game()
 
@@ -69,7 +69,7 @@ func start_game():
 
 #Acontece quando o jogador detecta alguma colisão com a bola
 func _on_player_area_entered(body):
-	$Pong.play()
+	$Sounds/Pong.play()
 	
 	print_debug("Colisão detectada nos players ------------")
 	
@@ -84,12 +84,12 @@ func _on_player_area_entered(body):
 
 #Acontece quando uma das paredes detectam colisão com a bola
 func _on_wall_area_entered(area):
-	$Score_Sound.play()
+	$Sounds/Score_Sound.play()
 	print_debug("Colisão detectada nas paredes")
 
 #Acontece quando o teto ou chão detecta uma colisão com a bola
 func _on_ceiling_area_entered(area):
-	$Pong.play()
+	$Sounds/Pong.play()
 	
 	print_debug("Colisão detectada no teto/chão")
 	
