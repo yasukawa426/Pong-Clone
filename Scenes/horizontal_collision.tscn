@@ -4,6 +4,7 @@
 size = Vector2(815, 10)
 
 [node name="HorizontalCollision" type="StaticBody2D"]
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(400, -5)
