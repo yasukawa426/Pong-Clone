@@ -87,6 +87,8 @@ stream = ExtResource("8_podgu")
 [node name="Pong" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = SubResource("AudioStreamWAV_nd7sr")
 
+[node name="SpeedTimer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="Entities/Player1" to="." method="_on_player_area_entered"]
 [connection signal="area_entered" from="Entities/Player2" to="." method="_on_player_area_entered"]
 [connection signal="area_entered" from="Collisions/VerticalCollisions/Left Wall" to="." method="_on_wall_area_entered"]
@@ -95,3 +97,4 @@ stream = SubResource("AudioStreamWAV_nd7sr")
 [connection signal="area_entered" from="Collisions/VerticalCollisions/Right Wall" to="." method="_on_right_wall_area_entered"]
 [connection signal="area_entered" from="Collisions/HorizontalCollisions/Ceiling" to="." method="_on_ceiling_area_entered"]
 [connection signal="area_entered" from="Collisions/HorizontalCollisions/Floor" to="." method="_on_ceiling_area_entered"]
+[connection signal="timeout" from="SpeedTimer" to="." method="_on_speed_timer_timeout"]
