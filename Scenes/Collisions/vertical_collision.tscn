@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_goque"]
 size = Vector2(10, 610)
 
-[node name="VerticalCollision" type="StaticBody2D"]
+[node name="VerticalCollision" type="Area2D"]
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
