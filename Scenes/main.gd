@@ -42,6 +42,26 @@ func _process(delta):
 #Método chamado para começar o jogo
 func start_game():
 	ball.position = $Markers/BallPosition.position
+	
+	var random_x = randf_range(-1.0, 1.0)
+	var random_y = randf_range(-1.0, 1.0)
+	
+	print_debug(str(random_x) + ", " + str(random_y))
+	
+	if random_x < 0:
+		random_x = floor(random_x)
+	else:
+		random_x = ceil(random_x)
+		
+	if random_y < 0:
+		random_y = floor(random_y)
+	else:
+		random_y = ceil(random_y)
+		
+	print_debug(str(random_x) + ", " + str(random_y))
+	
+	ball.movement = Vector2(random_x, random_y)
+	
 	player1.position = $Markers/Player1Position.position
 	player2.position = $Markers/Player2Position.position
 
