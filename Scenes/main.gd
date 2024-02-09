@@ -69,7 +69,7 @@ func start_game():
 	player2.position = $Markers/Player2Position.position
 
 #Acontece quando o jogador detecta alguma colisão com a bola
-func _on_player_body_entered(body):
+func _on_player_area_entered(body):
 	print_debug("Colisão detectada nos players")
 	
 	#pegamos o vetor de movimento da bola atual
