@@ -36,6 +36,7 @@ position = Vector2(776, 300)
 
 [node name="Ball" parent="Entities" instance=ExtResource("7_po3rg")]
 position = Vector2(400, 300)
+speed = 600.0
 
 [node name="Markers" type="Node" parent="."]
 
