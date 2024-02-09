@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ek713"]
 size = Vector2(26, 26)
 
-[node name="Ball" type="Area2D"]
+[node name="Ball" type="RigidBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.04308e-06, 5.96046e-08)
