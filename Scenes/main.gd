@@ -1,5 +1,8 @@
 extends Node
 
+#pontos maximos para ganhar o jogo
+@export var MAX_POINTS: int = 10
+
 #variavel que conta o score primeiro
 var first_score:int = 0
 
@@ -94,3 +97,36 @@ func _on_ceiling_area_entered(area):
 	
 	#atualizamos o valor na bola
 	ball.movement = movement
+
+#restart o round dps de um ponto
+func restart_round():
+	#para o movimento da bola
+	ball.movement = Vector2(0, 0)
+	
+	#reseta a posição das entidades
+	ball.position = $Markers/BallPosition.position
+	player1.position = $Markers/Player1Position.position
+	player2.position = $Markers/Player2Position.position
+	
+	#inicia o jogo
+	start_game()
+	
+
+#restart o game do zero
+func restart_game():
+	#para o movimento da bola
+	ball.movement = Vector2(0, 0)
+	
+	#reseta a posição das entidades
+	ball.position = $Markers/BallPosition.position
+	player1.position = $Markers/Player1Position.position
+	player2.position = $Markers/Player2Position.position
+	
+	first_score = 0
+	$"UI-Stage/HUD".update_first_score(first_score)
+	
+	second_score = 0
+	$"UI-Stage/HUD".update_second_score(second_score)
+	
+	#inicia o jogo
+	start_game()
