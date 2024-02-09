@@ -88,6 +88,7 @@ stream = ExtResource("8_podgu")
 stream = SubResource("AudioStreamWAV_nd7sr")
 
 [node name="SpeedTimer" type="Timer" parent="."]
+autostart = true
 
 [connection signal="area_entered" from="Entities/Player1" to="." method="_on_player_area_entered"]
 [connection signal="area_entered" from="Entities/Player2" to="." method="_on_player_area_entered"]

@@ -18,12 +18,15 @@ var player2: Node
 #Instancia da bola
 var ball: Node
 
+var initial_speed:int 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player1 = $Entities/Player1
 	player2 = $Entities/Player2
 	
 	ball = $Entities/Ball
+	initial_speed = ball.speed
 	
 	# identifica qual jogador é qual
 	player1.is_player_one = true
@@ -104,6 +107,8 @@ func _on_ceiling_area_entered(area):
 
 #restart o round dps de um ponto
 func restart_round():
+	ball.speed = initial_speed
+	
 	#para o movimento da bola
 	ball.movement = Vector2(0, 0)
 	
@@ -118,6 +123,8 @@ func restart_round():
 
 #restart o game do zero
 func restart_game():
+	ball.speed = initial_speed
+	
 	#para o movimento da bola
 	ball.movement = Vector2(0, 0)
 	
@@ -162,4 +169,4 @@ func _on_right_wall_area_entered(area):
 #a cada segundo, aumenta a velocidade da bola
 func _on_speed_timer_timeout():
 	print_debug("Velocidade aumentada")
-	ball.speed += 1
+	ball.speed += 50
