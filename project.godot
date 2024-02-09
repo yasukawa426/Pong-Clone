@@ -69,3 +69,7 @@ move_right={
 2d_physics/layer_1="Paredes"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Bola"
+
+[physics]
+
+common/physics_ticks_per_second=120
