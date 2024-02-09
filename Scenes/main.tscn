@@ -11,9 +11,11 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_51q36")
 
-[node name="HUD" parent="." instance=ExtResource("1_o6sbw")]
+[node name="UI-Stage" type="Node" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="HUD" parent="UI-Stage" instance=ExtResource("1_o6sbw")]
+
+[node name="ColorRect" type="ColorRect" parent="UI-Stage"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,39 +24,45 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="WhiteLine" parent="." instance=ExtResource("1_243nv")]
+[node name="WhiteLine" parent="UI-Stage" instance=ExtResource("1_243nv")]
 
-[node name="Player1" parent="." instance=ExtResource("4_8iywl")]
+[node name="Entities" type="Node" parent="."]
+
+[node name="Player1" parent="Entities" instance=ExtResource("4_8iywl")]
 position = Vector2(24, 300)
 
-[node name="Player2" parent="." instance=ExtResource("4_8iywl")]
+[node name="Player2" parent="Entities" instance=ExtResource("4_8iywl")]
 position = Vector2(776, 300)
 
-[node name="Player1Position" type="Marker2D" parent="."]
+[node name="Ball" parent="Entities" instance=ExtResource("7_po3rg")]
+position = Vector2(400, 300)
+
+[node name="Markers" type="Node" parent="."]
+
+[node name="Player1Position" type="Marker2D" parent="Markers"]
 position = Vector2(24, 300)
 
-[node name="Player2Position" type="Marker2D" parent="."]
+[node name="Player2Position" type="Marker2D" parent="Markers"]
 position = Vector2(776, 300)
 
-[node name="BallPosition" type="Marker2D" parent="."]
+[node name="BallPosition" type="Marker2D" parent="Markers"]
 position = Vector2(400, 300)
 
-[node name="Ball" parent="." instance=ExtResource("7_po3rg")]
-position = Vector2(400, 300)
+[node name="Collisions" type="Node" parent="."]
 
-[node name="VerticalCollisions" type="Node" parent="."]
+[node name="VerticalCollisions" type="Node" parent="Collisions"]
 
-[node name="Left Wall" parent="VerticalCollisions" instance=ExtResource("6_86tcd")]
+[node name="Left Wall" parent="Collisions/VerticalCollisions" instance=ExtResource("6_86tcd")]
 
-[node name="Right Wall" parent="VerticalCollisions" instance=ExtResource("6_86tcd")]
+[node name="Right Wall" parent="Collisions/VerticalCollisions" instance=ExtResource("6_86tcd")]
 position = Vector2(810, 0)
 
-[node name="HorizontalCollisions" type="Node" parent="."]
+[node name="HorizontalCollisions" type="Node" parent="Collisions"]
 
-[node name="Ceiling" parent="HorizontalCollisions" instance=ExtResource("5_phkc0")]
+[node name="Ceiling" parent="Collisions/HorizontalCollisions" instance=ExtResource("5_phkc0")]
 
-[node name="Floor" parent="HorizontalCollisions" instance=ExtResource("5_phkc0")]
+[node name="Floor" parent="Collisions/HorizontalCollisions" instance=ExtResource("5_phkc0")]
 position = Vector2(0, 610)
 
-[connection signal="body_entered" from="Player1" to="." method="_on_player_body_entered"]
-[connection signal="body_entered" from="Player2" to="." method="_on_player_body_entered"]
+[connection signal="body_entered" from="Entities/Player1" to="." method="_on_player_body_entered"]
+[connection signal="body_entered" from="Entities/Player2" to="." method="_on_player_body_entered"]
