@@ -20,5 +20,14 @@ func _ready():
 func _process(delta):
 	pass
 
+#Acontece quando o jogador detecta alguma colisão com a bola
 func _on_player_body_entered(body):
 	print_debug("Colisão detectada nos players")
+
+#Acontece quando uma das paredes detectam colisão com a bola
+func _on_wall_area_entered(area):
+	print_debug("Colisão detectada nas paredes")
+
+#Acontece quando o teto ou chão detecta uma colisão com a bola
+func _on_ceiling_area_entered(area):
+	print_debug("Colisão detectada no teto/chão")

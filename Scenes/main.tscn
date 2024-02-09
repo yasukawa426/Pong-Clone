@@ -66,3 +66,7 @@ position = Vector2(0, 610)
 
 [connection signal="body_entered" from="Entities/Player1" to="." method="_on_player_body_entered"]
 [connection signal="body_entered" from="Entities/Player2" to="." method="_on_player_body_entered"]
+[connection signal="area_entered" from="Collisions/VerticalCollisions/Left Wall" to="." method="_on_wall_area_entered"]
+[connection signal="area_entered" from="Collisions/VerticalCollisions/Right Wall" to="." method="_on_wall_area_entered"]
+[connection signal="area_entered" from="Collisions/HorizontalCollisions/Ceiling" to="." method="_on_ceiling_area_entered"]
+[connection signal="area_entered" from="Collisions/HorizontalCollisions/Floor" to="." method="_on_ceiling_area_entered"]
