@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://chv6hexpyrl6r"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_51q36"]
-[ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/white_line.tscn" id="1_243nv"]
-[ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/hud.tscn" id="1_o6sbw"]
-[ext_resource type="PackedScene" uid="uid://b1hnqllv0glhr" path="res://Scenes/player.tscn" id="4_8iywl"]
-[ext_resource type="PackedScene" uid="uid://cg3a0jjmjpqn1" path="res://Scenes/horizontal_collision.tscn" id="5_phkc0"]
-[ext_resource type="PackedScene" uid="uid://cixau5hnhdvw5" path="res://Scenes/vertical_collision.tscn" id="6_86tcd"]
-[ext_resource type="PackedScene" uid="uid://8ud1u23f47g8" path="res://Scenes/ball.tscn" id="7_po3rg"]
+[ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/UI/white_line.tscn" id="1_243nv"]
+[ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/UI/hud.tscn" id="1_o6sbw"]
+[ext_resource type="PackedScene" uid="uid://b1hnqllv0glhr" path="res://Scenes/Entities/player.tscn" id="4_8iywl"]
+[ext_resource type="PackedScene" uid="uid://cg3a0jjmjpqn1" path="res://Scenes/Collisions/horizontal_collision.tscn" id="5_phkc0"]
+[ext_resource type="PackedScene" uid="uid://cixau5hnhdvw5" path="res://Scenes/Collisions/vertical_collision.tscn" id="6_86tcd"]
+[ext_resource type="PackedScene" uid="uid://8ud1u23f47g8" path="res://Scenes/Entities/ball.tscn" id="7_po3rg"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_51q36")
