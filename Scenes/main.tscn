@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://chv6hexpyrl6r"]
+[gd_scene load_steps=7 format=3 uid="uid://chv6hexpyrl6r"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_51q36"]
 [ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/white_line.tscn" id="1_243nv"]
 [ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/hud.tscn" id="1_o6sbw"]
 [ext_resource type="PackedScene" uid="uid://b1hnqllv0glhr" path="res://Scenes/player.tscn" id="4_8iywl"]
+[ext_resource type="PackedScene" uid="uid://cg3a0jjmjpqn1" path="res://Scenes/horizontal_collision.tscn" id="5_phkc0"]
+[ext_resource type="PackedScene" uid="uid://cixau5hnhdvw5" path="res://Scenes/vertical_collision.tscn" id="6_86tcd"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_51q36")
@@ -32,3 +34,15 @@ position = Vector2(24, 300)
 
 [node name="Player2Position" type="Marker2D" parent="."]
 position = Vector2(776, 300)
+
+[node name="Edge Collisions" type="Node" parent="."]
+
+[node name="Ceiling" parent="Edge Collisions" instance=ExtResource("5_phkc0")]
+
+[node name="Floor" parent="Edge Collisions" instance=ExtResource("5_phkc0")]
+position = Vector2(0, 610)
+
+[node name="Left Wall" parent="Edge Collisions" instance=ExtResource("6_86tcd")]
+
+[node name="Right Wall" parent="Edge Collisions" instance=ExtResource("6_86tcd")]
+position = Vector2(810, 0)
