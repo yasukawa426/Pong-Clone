@@ -43,3 +43,5 @@ mono_crash.*.json
 *.pidb
 *.svclog
 *.scc
+
+export/
