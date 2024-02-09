@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://daqebll6d2abc"]
+[gd_scene load_steps=2 format=3 uid="uid://daqebll6d2abc"]
+
+[ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_h8t2d"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_h8t2d")
 
 [node name="FirstScore" type="Label" parent="."]
 anchors_preset = 5
