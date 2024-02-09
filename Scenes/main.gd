@@ -69,6 +69,8 @@ func start_game():
 
 #Acontece quando o jogador detecta alguma colisão com a bola
 func _on_player_area_entered(body):
+	$Pong.play()
+	
 	print_debug("Colisão detectada nos players ------------")
 	
 	#pegamos o vetor de movimento da bola atual
@@ -87,6 +89,8 @@ func _on_wall_area_entered(area):
 
 #Acontece quando o teto ou chão detecta uma colisão com a bola
 func _on_ceiling_area_entered(area):
+	$Pong.play()
+	
 	print_debug("Colisão detectada no teto/chão")
 	
 	#pegamos o vetor de movimento da bola atual
