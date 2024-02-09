@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1hnqllv0glhr"]
 
-[ext_resource type="Texture2D" uid="uid://x1r6uwbg60qf" path="res://res/Art/Player.png" id="1_i4rbf"]
 [ext_resource type="Script" path="res://Scenes/Entities/player.gd" id="1_sm8x3"]
+[ext_resource type="Texture2D" uid="uid://x1r6uwbg60qf" path="res://res/Art/Player.png" id="2_htirl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8stg3"]
 size = Vector2(46, 194)
@@ -19,4 +19,4 @@ shape = SubResource("RectangleShape2D_8stg3")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 2.5183e-06)
 scale = Vector2(1, 1.00518)
-texture = ExtResource("1_i4rbf")
+texture = ExtResource("2_htirl")
