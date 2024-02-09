@@ -2,7 +2,7 @@
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="First Score" type="Label" parent="."]
+[node name="FirstScore" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -15,7 +15,7 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Second Score" type="Label" parent="."]
+[node name="SecondScore" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
