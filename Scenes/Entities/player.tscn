@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1hnqllv0glhr"]
+[gd_scene load_steps=5 format=3 uid="uid://b1hnqllv0glhr"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/player.gd" id="1_sm8x3"]
 [ext_resource type="Texture2D" uid="uid://x1r6uwbg60qf" path="res://res/Art/Player.png" id="2_htirl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8stg3"]
 size = Vector2(46, 194)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cyr4v"]
+cull_mode = 2
+polygon = PackedVector2Array(23, 96.5, -23, 96.5, -23, -96.5, 23, -96.5)
 
 [node name="Player" type="Area2D"]
 scale = Vector2(0.4, 0.4)
@@ -20,3 +24,8 @@ shape = SubResource("RectangleShape2D_8stg3")
 position = Vector2(0, 2.5183e-06)
 scale = Vector2(1, 1.00518)
 texture = ExtResource("2_htirl")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(0, 2.5183e-06)
+scale = Vector2(1, 1.00518)
+occluder = SubResource("OccluderPolygon2D_cyr4v")

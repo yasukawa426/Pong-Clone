@@ -25,9 +25,10 @@ script = ExtResource("1_51q36")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="BackgroundLight" type="PointLight2D" parent="."]
 position = Vector2(399.5, 299.5)
 scale = Vector2(3.12891, 2.33984)
+shadow_enabled = true
 texture = ExtResource("2_xfkv6")
 
 [node name="UI-Stage" type="Node" parent="."]
@@ -56,6 +57,11 @@ position = Vector2(776, 300)
 [node name="Ball" parent="Entities" instance=ExtResource("7_po3rg")]
 position = Vector2(400, 300)
 speed = 600.0
+
+[node name="BallLight" type="PointLight2D" parent="Entities/Ball"]
+scale = Vector2(1.5, 1.5)
+shadow_enabled = true
+texture = ExtResource("2_xfkv6")
 
 [node name="Markers" type="Node" parent="."]
 
@@ -88,7 +94,7 @@ position = Vector2(0, 610)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = SubResource("AudioStreamMP3_uae8v")
-volume_db = -13.206
+volume_db = -45.0
 
 [node name="Score_Sound" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("8_podgu")
@@ -98,8 +104,8 @@ stream = SubResource("AudioStreamWAV_nd7sr")
 
 [connection signal="area_entered" from="Entities/Player1" to="." method="_on_player_area_entered"]
 [connection signal="area_entered" from="Entities/Player2" to="." method="_on_player_area_entered"]
-[connection signal="area_entered" from="Collisions/VerticalCollisions/Left Wall" to="." method="_on_wall_area_entered"]
 [connection signal="area_entered" from="Collisions/VerticalCollisions/Left Wall" to="." method="_on_left_wall_area_entered"]
+[connection signal="area_entered" from="Collisions/VerticalCollisions/Left Wall" to="." method="_on_wall_area_entered"]
 [connection signal="area_entered" from="Collisions/VerticalCollisions/Right Wall" to="." method="_on_wall_area_entered"]
 [connection signal="area_entered" from="Collisions/VerticalCollisions/Right Wall" to="." method="_on_right_wall_area_entered"]
 [connection signal="area_entered" from="Collisions/HorizontalCollisions/Ceiling" to="." method="_on_ceiling_area_entered"]
