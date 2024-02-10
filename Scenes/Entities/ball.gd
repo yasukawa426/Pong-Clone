@@ -20,8 +20,11 @@ func _process(delta):
 	
 	#print_debug("Posição da bola: " + str(position))
 
-# Assim que acertar alguém, emite as particulas
+# Assim que acertar alguém, emite as particulas e aumenta a velocidade
 func _on_area_entered(area):
+	print_debug("Velocidade aumentada")
+	speed += 50
+	
 	var particle: GPUParticles2D  = hit_particle_scene.instantiate()
 	#Não é necessário mecher na posição, já que está sendo instaciado como filho da bola, esta na mesma posição da bola
 	#O (0,0) da particula é o centro da bola

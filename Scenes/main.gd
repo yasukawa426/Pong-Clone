@@ -164,9 +164,3 @@ func _on_right_wall_area_entered(area):
 	
 	else:
 		restart_game()
-	
-
-#a cada segundo, aumenta a velocidade da bola
-func _on_speed_timer_timeout():
-	print_debug("Velocidade aumentada")
-	ball.speed += 50
