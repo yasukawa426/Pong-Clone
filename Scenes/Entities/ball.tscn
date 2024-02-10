@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8ud1u23f47g8"]
+[gd_scene load_steps=5 format=3 uid="uid://8ud1u23f47g8"]
 
 [ext_resource type="Script" path="res://Scenes/Entities/ball.gd" id="1_kxdpw"]
 [ext_resource type="Texture2D" uid="uid://cjfiey51yp7nr" path="res://res/Art/ball.png" id="2_l7ofh"]
+[ext_resource type="PackedScene" uid="uid://c3jwamfp25lva" path="res://Scenes/hit_particle.tscn" id="2_rmavr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ek713"]
 size = Vector2(26, 26)
@@ -10,6 +11,7 @@ size = Vector2(26, 26)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_kxdpw")
+hit_particle_scene = ExtResource("2_rmavr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.04308e-06, 5.96046e-08)
@@ -18,3 +20,5 @@ texture = ExtResource("2_l7ofh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ek713")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
