@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://chv6hexpyrl6r"]
+[gd_scene load_steps=12 format=3 uid="uid://chv6hexpyrl6r"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_51q36"]
 [ext_resource type="PackedScene" uid="uid://cnencmgxicga0" path="res://Scenes/UI/white_line.tscn" id="1_243nv"]
 [ext_resource type="PackedScene" uid="uid://daqebll6d2abc" path="res://Scenes/UI/hud.tscn" id="1_o6sbw"]
+[ext_resource type="Texture2D" uid="uid://bpe0k01se1x0" path="res://res/Art/neutral_point_light.webp" id="2_xfkv6"]
 [ext_resource type="PackedScene" uid="uid://b1hnqllv0glhr" path="res://Scenes/Entities/player.tscn" id="4_8iywl"]
 [ext_resource type="PackedScene" uid="uid://cg3a0jjmjpqn1" path="res://Scenes/Collisions/horizontal_collision.tscn" id="5_phkc0"]
 [ext_resource type="PackedScene" uid="uid://cixau5hnhdvw5" path="res://Scenes/Collisions/vertical_collision.tscn" id="6_86tcd"]
@@ -21,6 +22,14 @@ loop_end = 2840
 [node name="Main" type="Node"]
 script = ExtResource("1_51q36")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(399.5, 299.5)
+scale = Vector2(3.12891, 2.33984)
+texture = ExtResource("2_xfkv6")
+
 [node name="UI-Stage" type="Node" parent="."]
 
 [node name="HUD" parent="UI-Stage" instance=ExtResource("1_o6sbw")]
@@ -31,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0.321569, 1)
 metadata/_edit_lock_ = true
 
 [node name="WhiteLine" parent="UI-Stage" instance=ExtResource("1_243nv")]
