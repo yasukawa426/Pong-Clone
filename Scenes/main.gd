@@ -145,10 +145,10 @@ func restart_game():
 
 #acertou a parede esquerda
 func _on_left_wall_area_entered(area):
-	first_score += 1
-	$"UI-Stage/HUD".update_first_score(first_score)
+	second_score += 1
+	$"UI-Stage/HUD".update_second_score(second_score)
 	
-	if first_score < MAX_POINTS:
+	if second_score < MAX_POINTS:
 		restart_round()
 	
 	else:
@@ -156,10 +156,10 @@ func _on_left_wall_area_entered(area):
 
 #acertou a parede direita
 func _on_right_wall_area_entered(area):
-	second_score += 1
-	$"UI-Stage/HUD".update_second_score(second_score)
+	first_score += 1
+	$"UI-Stage/HUD".update_first_score(first_score)
 	
-	if second_score < MAX_POINTS:
+	if first_score < MAX_POINTS:
 		restart_round()
 	
 	else:
